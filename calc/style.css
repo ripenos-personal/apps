@@ -19,12 +19,13 @@
     width: 100%;
     height: 100vh;
     padding: 5px;
+    padding-top: 15px;
   }
   input[type="text"]{
-    height: 50px;
-    width: 100%;
+    height: 70px;
+    width: 95%;
     color: beige;
-    font-size: 22px;
+    font-size: 45px;
     font-weight: bold;
     text-align: right;
     padding-right: 20px;
@@ -42,12 +43,13 @@
     width: 23.5%;
     height:14vh;
     margin-bottom: 5.5px;
-    font-size: 22px;
+    font-size: 44px;
     border-radius: 8px;
     color: beige;
     border:0.25px solid rgba(241, 241, 241, 0.1176470588);;
     background: rgba(241, 241, 241, 0.095);;
   }
+
   input[type="button"]:hover{
     transition: all 0.3s;
     background: rgba(241, 241, 241, 0.25);;
@@ -58,10 +60,10 @@
     color: white;
   }
   input#equal{
-    width: 98%;
-    height: 10vh;
+    width: 95%;
+    height: 7.5vh;
     margin: 5px 0 10px 0;
-    font-size: 30px;
+    font-size: 40px;
     color: white;
     background: rgba(255, 98, 0, 0.5);
     border: 1px solid #b32a00;
