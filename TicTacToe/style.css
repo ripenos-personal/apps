@@ -12,11 +12,13 @@
 body{
   color: #fff;
   background: url('https://ripenos.github.io/Assets/General/RipenWaves2.png');
+  background-size: cover;
   text-align: center;
+  height: 100vh;
+  height: 100dvh;
+  backdrop-filter: blur(45px) brightness(50%);
 }
-.cont{
-  width: 100%; height: 100%;
-}
+
 .select-box, .play-board, .result-box{
   position: absolute;
   top: 50%;
@@ -24,6 +26,7 @@ body{
   transform: translate(-50%, -60%);
   transition: all 0.3s ease;
 }
+
 .select-box{
     background: #82828276;
     box-shadow: 0 10px 20px rgba(0,0,0,0.08);
