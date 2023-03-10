@@ -1,0 +1,239 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://ripenos.github.io/Assets/General/ripenOs.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://ripenos.github.io/Assets/General/ripenOs.jpg" />
+    <title>Apps | RGOS</title>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:Arial, Helvetica, sans-serif
+        }
+        body {
+            color: white;
+            background: url('https://ripenos.github.io/Assets/General/RipenWaves2.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+          /* scrollbar */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+        border-radius: 5px;
+        background: transparent;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, rgba(255, 140, 0, 0.55) 0%, rgba(133, 53, 0, 0.55) 100%);
+        border-radius: 2px;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, rgba(255, 140, 0, 0.75) 0%, rgba(133, 53, 0, 0.75) 100%);
+        border-radius: 50px;
+        }
+
+        .container{
+            backdrop-filter: blur(45px) brightness(50%); 
+            width: 100%; height: 100%; 
+            position: fixed; 
+            overflow-x: hidden; overflow-y: scroll;
+            z-index: 0;
+        }
+        hr{
+            position: relative; width: 100%;color: rgba(255, 204, 127, 0.25); margin-top: 30px;
+        }
+        h1, h3{padding: 2.5px; color: rgba(255, 224, 201, 0.95);}
+        a{text-decoration: none; color: white; cursor: pointer;}
+        .topnav {
+            position: fixed;
+            width: 98%;
+            height: 100px;
+            padding: 20px; margin-top: 10px;
+            backdrop-filter: blur(45px) brightness(50%); 
+            z-index: 1;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 204, 127, 0.35);
+            border-style: groove;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .topnav .Logo{
+            padding-left: 10px;
+            width: max-content;
+        }
+        .topnav #Logoimg {
+            width: 50px;
+            border-radius: 12px;
+            margin-bottom: -0.75em;
+        }
+        .topnav h3 {
+            display: inline;
+            font-size: 2.1em;
+            margin-left: 10px;
+            font-weight: 800;
+        }
+
+        .topnav .right-topnav{
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            transform: translateY(-50%);
+        }
+
+        .topnav .right-topnav button {
+            color: white;
+            background-color: rgb(255, 123, 0);
+            border-radius: 8px;
+            padding: 10px; margin-left: 5px;
+            width: 125px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border: 1px solid #ccc;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+
+        .topnav #logo-name{color: rgb(255, 111, 0); font-weight: 800;}
+
+        @media screen and (max-width: 825px) {
+            .topnav #logo-name{display: none;}
+            .topnav #logo-supperator{display: none;}
+            .topnav .Logo{padding-left: 5px;}
+            .topnav h3 {font-size: 1.5em; margin-left: 5px;}
+            .topnav #Logoimg {margin-bottom: -1em;}
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav .right-topnav {display: none;}
+            .topnav .Logo{
+                padding-left: 0px;
+                position: absolute;
+                left: 50%; 
+                transform: translateX(-50%);
+            }
+
+            .topnav #logo-name{display: inline;}
+            .topnav #logo-supperator{display: inline;}
+        }
+
+        @media screen and (max-width: 400px) {
+            .topnav #logo-name{display: none;}
+            .topnav #logo-supperator{display: none;}
+        }
+
+        @media screen and (max-width: 300px) {
+            .topnav #Logoimg {display: none;}
+            .topnav h3 {margin: 0px; padding: 0; width: max-content;}
+        }
+
+        main {
+            position: relative;
+            top: 130px;
+            padding: 10px; padding-left: 20px; padding-right: 20px;
+            text-align: center;
+        }
+        main p {
+            padding: 2px;
+            line-height: 2;
+            font-size: 1.1em;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 400px) {
+            main p {font-size: 1em;}
+        }
+
+        .Apps-cont{
+            padding: 5px;
+            margin-top: 30px;
+        }
+
+        .Apps{
+            width: calc(100% / 5.5);
+            height: 80px;
+            margin: 10px;
+            border-radius: 8px;
+            background-color:rgba(114, 114, 114, 0.15);
+            color: white;
+            border: 1px solid rgba(255, 204, 127, 0.35);
+            border-style: groove;
+            font-size: 1.2em;
+        }
+
+        @media screen and (max-width: 895px) {
+            .Apps{font-size: 1em;}
+        }
+
+        @media screen and (max-width: 975px) {
+            .Apps{width: calc(100% / 3.5);}
+        }
+
+        @media screen and (max-width: 600px) {
+            .Apps{width: calc(100% / 3.5);}
+        }
+
+        @media screen and (max-width: 550px) {
+            .Apps{width: calc(100% / 1);}
+        }
+
+        footer{
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <div class="Logo">
+            <img id="Logoimg" src="https://ripenos.github.io/Assets/General/ripenOs.jpg" alt="">
+            <h3><span id="logo-name">RGOS</span> <span id="logo-supperator"> | </span> GLOBAL APPS</h3>
+        </div>
+        <div class="right-topnav">
+            <a href="https://ripenos.github.io"><button>Ripen OS</button></a>
+            <a href="https://github.com/ripenos/apps/"><button>Repo</button></a>
+        </div>
+    </div>
+    <div class="container">
+        <main>
+            <p>
+                <font color="orange">RGOS</font> Global Apps are the applications developed for the <font color="orange">Ripen OS and Family</font>. It can be used through either of the OSes or can be directly Accessed by this site.
+                <br>
+                <font color="yellow">
+                    This site offers you Most of the apps accessible in the Oses but some apps wouldn't exist due to it's OS spesific! 
+                </font>
+            </p>
+
+            <div class="Apps-cont">
+                <a href="Browser/index.html" target="_blank" rel="noopener noreferrer"><button class="Apps">Browser</button></a>
+                <a href="calc/index.html" target="_blank" rel="noopener noreferrer"><button class="Apps">Calculator</button></a>
+                <a href="Calendar/index.html" target="_blank" rel="noopener noreferrer"><button class="Apps">Calendar</button></a>
+                <a href="Files/index.html" target="_blank" rel="noopener noreferrer"><button class="Apps">Files</button></a>
+                <a href="Image Editor/index.html" target="_blank" rel="noopener noreferrer"><button class="Apps">Image Editor</button></a>
+                <a href="notes/notepad-project/index.html" target="_blank" rel="noopener noreferrer"><button class="Apps">Notes</button></a>
+                <a href="QR-generator/index.html" target="_blank" rel="noopener noreferrer"><button class="Apps">QR generator</button></a>
+                <a href="Snake/index.html" target="_blank" rel="noopener noreferrer"><button class="Apps">Snake Game</button></a>
+                <a href="TicTacToe/index.html" target="_blank" rel="noopener noreferrer"><button class="Apps">Tic Tac Toe</button></a>
+                <a href="Word Scramble/index.html" target="_blank" rel="noopener noreferrer"><button class="Apps">Scramble</button></a>
+            </div>
+
+            <footer>
+                2022-23 (c) Ripenos
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
