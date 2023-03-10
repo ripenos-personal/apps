@@ -24,7 +24,7 @@ h4{font-size: 20px; margin-bottom: 2px;}
     position: fixed;
     top: 10px;
     left: 10px;
-    padding: 10px;
+    padding: 10px; padding-top: 15px;
     background-color: rgba(44, 44, 44, 0.25);
     overflow-x: hidden;
     border-radius: 8px;
@@ -122,8 +122,8 @@ h4{font-size: 20px; margin-bottom: 2px;}
 
 #Files-body{
     position: absolute;
-    top: 0px;
-    left: 23%;
+    top: 10px;
+    left: 23.5%;
 }
 
 #Toolbar{
@@ -160,7 +160,7 @@ h4{font-size: 20px; margin-bottom: 2px;}
 
 @media screen and (max-width: 815px) {
     .FileNav{display: none;}
-    #Files-body{left: 3%;}
+    #Files-body{left: 20px;}
 
     #Toolbar{display: none;}
     .folders{margin-top: 0px;}
